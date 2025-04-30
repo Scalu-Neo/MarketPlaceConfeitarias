@@ -1,100 +1,77 @@
-🍰 Confeitarias App
-Projeto web para cadastro, exibição e gerenciamento de produtos de confeitarias. Utiliza Laravel, Vue 3, Inertia.js e PostgreSQL com integração de mapa via Leaflet e localização usando Geoapify API.
+# 🍰 Confeitarias App
 
-🚀 Tecnologias Utilizadas
-Laravel 12.x
+Projeto web para cadastro, exibição e gerenciamento de produtos de confeitarias. Utiliza **Laravel**, **Vue 3**, **Inertia.js** e **PostgreSQL**, com integração de mapa via **Leaflet** e localização usando **Geoapify API**.
 
-Vue 3
+---
 
-Inertia.js
+## 🚀 Tecnologias Utilizadas
 
-PostgreSQL
+- [Laravel 12.x](https://laravel.com/)
+- [Vue 3](https://vuejs.org/)
+- [Inertia.js](https://inertiajs.com/)
+- [PostgreSQL](https://www.postgresql.org/) ou SQLite
+- [Leaflet](https://leafletjs.com/)
+- [Geoapify Geocoding API](https://www.geoapify.com/)
 
-Leaflet
+---
 
-Geoapify Geocoding API
+## 🧰 Pré-requisitos
 
-🧰 Pré-requisitos
-PHP >= 8.2
+- PHP >= 8.2
+- Node.js >= 18.x
+- Composer
+- PostgreSQL ou SQLite
+- Chave da API do [Geoapify](https://www.geoapify.com/)
 
-Node.js >= 18.x
+---
 
-Composer
+## ⚙️ Instalação do Projeto
 
-PostgreSQL ou SQLite
+### 1. Clone o repositório
 
-Geoapify API Key
-
-⚙️ Instalação do Projeto
-Clone o repositório:
-
-bash
-Copiar
-Editar
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```bash
+git clone https://github.com/Scalu-Neo/MarketPlaceConfeitarias.git
 cd nome-do-repositorio
-Instale as dependências do Laravel e do Vue:
 
-bash
-Copiar
-Editar
+## ⚙️ Instalação do Projeto
+
+### 2. Instale as dependências
+
+```bash
 composer install
 npm install
-Copie o arquivo de exemplo .env e configure as variáveis:
 
-bash
-Copiar
-Editar
+### 3. Copie o `.env.example` e configure as variáveis
+
+```bash
 cp .env.example .env
-Edite o .env e configure sua chave:
 
-ini
-Copiar
-Editar
 GEOCODE_API_KEY=coloque-sua-chave-aqui
-Gere a chave da aplicação:
 
-bash
-Copiar
-Editar
+### 4. Gere a chave da aplicação
+
 php artisan key:generate
-Configure o banco de dados (no .env):
 
-env
-Copiar
-Editar
+### 5. Configure o banco de dados
+No arquivo .env, atualize os dados de acesso ao seu banco de dados PostgreSQL
+
+```bash
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
 DB_PORT=5432
 DB_DATABASE=nome_do_banco
 DB_USERNAME=usuario
 DB_PASSWORD=senha
-Rode as migrations:
 
-bash
-Copiar
-Editar
+### 6. Rode as migrations
+
+```bash
 php artisan migrate
-Inicie os servidores:
 
-bash
-Copiar
-Editar
+###7. Inicie os servidores de desenvolvimento
+
+```bash
 npm run dev
+
+```bash
 php artisan serve
-Alternativamente, rode tudo com:
-
-bash
-Copiar
-Editar
-composer run dev
-🌍 Funcionalidades
-Cadastro, listagem e exclusão de produtos
-
-Upload de múltiplas imagens por produto
-
-Visualização de confeitarias no mapa com Leaflet
-
-Localização geográfica baseada em endereço via Geoapify
-
-Interface dinâmica com Vue + Inertia.js
