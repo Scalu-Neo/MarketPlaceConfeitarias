@@ -21,7 +21,7 @@ Projeto web para cadastro, exibição e gerenciamento de produtos de confeitaria
 - PHP >= 8.2
 - Node.js >= 18.x
 - Composer
-- PostgreSQL ou SQLite
+- PostgreSQL
 - Chave da API do [Geoapify](https://www.geoapify.com/)
 
 ---
